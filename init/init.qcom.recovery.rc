@@ -26,7 +26,8 @@
 #
 
 on init
-    write /sys/class/backlight/panel0-backlight/brightness 127
+    setprop ro.recovery.ui.brightness_normal_percent 25
+    setprop ro.recovery.ui.brightness_dimmed_percent 5
     setprop sys.usb.configfs 1
 
 on property:ro.boot.usbcontroller=*
